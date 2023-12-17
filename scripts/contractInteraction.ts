@@ -22,8 +22,8 @@ async function main () {
     console.log("total supply:", tx.toString());
 
     let burn = await cca.burn(0);
-    await burn.wait();
-    console.log("burned tokenId 0");
+    // await burn.wait();
+    // console.log("burned tokenId 0");
     // console.log("total supply:", (await cca.totalSupply()).toString());
     //
     // let airdrop = await cca.airdrop([deployer.address],1);
