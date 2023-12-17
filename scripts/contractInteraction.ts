@@ -16,10 +16,10 @@ async function main () {
     const CCA: CreepCrewAditus__factory = await ethers.getContractFactory("CreepCrewAditus");
     const cca = await CCA.attach("0xB3B4C26f741d726A8121F0bfc2bBeb9C21792a20");
     console.log("The Aditus contract is attached to:", cca.target);
-
-    let tx = await cca.totalSupply();
-    console.log("Deployer address: ", deployer.address);
-    console.log("total supply:", tx.toString());
+    //
+    // let tx = await cca.totalSupply();
+    // console.log("Deployer address: ", deployer.address);
+    // console.log("total supply:", tx.toString());
 
     // let burn = await cca.burn(0);
     // await burn.wait();
