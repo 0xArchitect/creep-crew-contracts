@@ -19,7 +19,7 @@ async function main () {
 
     // let tx = await cca.totalSupply();
     console.log("Deployer address: ", deployer.address);
-    console.log("total supply:", tx.toString());
+    // console.log("total supply:", tx.toString());
 
     // let burn = await cca.burn(0);
     // await burn.wait();
