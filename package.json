@@ -1,16 +1,29 @@
 {
-  "name": "hardhat-project",
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
-    "@openzeppelin/contracts-upgradeable": "^5.0.0",
-    "erc721a": "^4.2.3",
-    "hardhat": "^2.17.3"
+  "name": "gigaken-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@openzeppelin/contracts": "^5.0.0",
-    "@openzeppelin/hardhat-upgrades": "^2.3.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@openzeppelin/contracts": "^4.9.2",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3",
+    "@openzeppelin/hardhat-upgrades": "^2.2.1",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "dot-env": "^0.0.1",
     "dotenv": "^16.3.1",
     "erc721a-upgradeable": "^4.2.3",
-    "operator-filter-registry": "^1.4.2"
+    "hardhat": "^2.17.0",
+    "hardhat-deploy": "^0.11.34",
+    "hardhat-etherscan": "^1.0.1",
+    "operator-filter-registry": "^1.4.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "erc721a": "^4.2.3"
   }
 }
