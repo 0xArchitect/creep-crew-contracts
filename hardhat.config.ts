@@ -2,14 +2,21 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@openzeppelin/hardhat-upgrades"
 import "@nomicfoundation/hardhat-toolbox";
 import * as dotenv from "dotenv";
+
 dotenv.config({ path: __dirname + "/.env" });
 const config: HardhatUserConfig = {
-  solidity: "0.8.20",
-
-
+  solidity: {
+    version: "0.8.17",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
   networks: {
     goerli: {
-      url: "https://goerli.infura.io/v3/3932027bc24b4df089d1ab33886ad3db",
+      url: "https://eth-goerli.g.alchemy.com/v2/i52HvKY2UtarqpbA7AxrWnxQJHMI0RXK",
       accounts: [process.env.PRIVATE_KEY || ""],
     },
     mainnet: {
@@ -31,9 +38,15 @@ const config: HardhatUserConfig = {
       polygon: "9UHP9XAJW9C5CGVRG5IQ29ZEKTB7N12TRE",
       goerli: "31WXEYFAGW4JBBSRRJZRJQB2GB5D6MB48W",
       mainnet: "31WXEYFAGW4JBBSRRJZRJQB2GB5D6MB48W",
-    }
-  }
-
+    },
+  },
+  gasReporter: {
+    enabled: true,
+    outputFile:"gas-report.txt",
+    currency: "USD",
+    noColors:true,
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY,
+    // token:"MATIC"
+  },
 };
-
 export default config;
