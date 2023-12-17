@@ -18,7 +18,7 @@ async function main () {
     console.log("The Aditus contract is attached to:", cca.target);
 
     // let tx = await cca.totalSupply();
-    // console.log("Deployer address: ", deployer.address);
+    console.log("Deployer address: ", deployer.address);
     console.log("total supply:", tx.toString());
 
     // let burn = await cca.burn(0);
